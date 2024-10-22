@@ -25,11 +25,11 @@ body {
 }
 
 
-.Container > * {
-background-color: rgb(226, 176, 13);
-margin: 1px;
-flex: 1;
-    
+.Container>* {
+    background-color: rgb(226, 176, 13);
+    margin: 1px;
+    flex: 1;
+
 }
 
 .rowContainer {
@@ -37,9 +37,13 @@ flex: 1;
     flex-direction: column;
 }
 
-.rowContainer > * {
+.rowContainer>* {
     background-color: aliceblue;
     height: 10px;
     margin: 1px;
     flex: 1;
+}
+
+.block:hover {
+    background-color: rgb(255, 111, 111);
 }
