@@ -1,5 +1,3 @@
-//TODO Left click and drag fills in all of them (If possibble)
-
 //GlovalVariabals
 let clears = 0;
 let promtText;
@@ -73,11 +71,24 @@ function userInput() {
     //Make it so you can add color
     const blocks = document.querySelectorAll(".block");
     blocks.forEach((block) => {
+        //Add
         block.addEventListener("click", function (e) {
             block.setAttribute("style", "background: red;")
-            console.log("Working!")
+            console.log("left button clicked!")
+        })
+        //Remove
+        block.addEventListener("mousedown ", function (e) {
+            if (e.block == 3) {
+                block.setAttribute("style", "background: white;")
+                console.log("right button clicked!")
+            }
+
+
+
         })
     })
+
+
 }
 
 //TODO make it so you can left click to remove 
