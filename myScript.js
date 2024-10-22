@@ -1,14 +1,11 @@
+//TODO Left click and drag fills in all of them (If possibble)
+
 //GlovalVariabals
 let clears = 0;
 let promtText;
 
 //Creating Dom
 const body = document.querySelector("body")
-
-const UserGridInputButton = document.createElement("button")
-UserGridInputButton.className = "buttonTest"
-UserGridInputButton.textContent = "Click Here to chose your grid size!"
-body.appendChild(UserGridInputButton)
 
 //Text
 
@@ -17,27 +14,29 @@ textName.textContent = " Etch A SKETCH"
 body.appendChild(textName)
 
 
+//Creating user input button
+const UserGridInputButton = document.createElement("button")
+UserGridInputButton.className = "buttonTest"
+UserGridInputButton.textContent = "Click Here to chose your grid size!"
+body.appendChild(UserGridInputButton)
+
+
 //grid System
 const containerDiv = document.createElement("div")
 containerDiv.className = "container"
 body.appendChild(containerDiv)
 
 
-//TODO Add limit of 100. 
+
+
+
 UserGridInputButton.addEventListener("click", () => {
     //Promt the user for size of grid
     promtText = prompt("Type a number (Maximum 100)")
-    if (promtText < 100) {
-        console.log("Within range")
 
-    }
-    else {
-        promtText = 100;
-    }
-    console.log(promtText)
-    //remove all things in container 
+    promtTextfunc()
+
     clearScreen()
-
 
     gridCreater()
 
@@ -47,8 +46,6 @@ UserGridInputButton.addEventListener("click", () => {
 })
 
 //Functions
-
-
 
 
 function gridCreater() {
@@ -99,5 +96,12 @@ function clearScreen() {
 
 
 
-
+function promtTextfunc() {
+    if (promtText < 100) {
+        return promtText
+    }
+    else {
+        return promtText = 100;
+    }
+}
 
