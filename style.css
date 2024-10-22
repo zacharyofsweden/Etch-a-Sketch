@@ -16,22 +16,30 @@ body {
 
 
 .Container {
-
     background-color: aliceblue;
     width: 900px;
     height: 900px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
+    border-style: solid;
 }
 
 
 .Container > * {
 background-color: rgb(226, 176, 13);
-width: 10px;
-height: 10px;
 margin: 1px;
 flex: 1;
     
+}
+
+.rowContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.rowContainer > * {
+    background-color: aliceblue;
+    height: 10px;
+    margin: 1px;
+    flex: 1;
 }
